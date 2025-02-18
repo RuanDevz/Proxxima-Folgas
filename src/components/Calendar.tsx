@@ -7,9 +7,10 @@ import { useNavigate } from 'react-router-dom';
 interface CalendarProps {
   leaveRequests: LeaveRequest[];
   onWeekClick: (week: WeekPeriod) => void;
+  isDark?: boolean
 }
 
-export function Calendar({ leaveRequests, onWeekClick }: CalendarProps) {
+export function Calendar({ leaveRequests, onWeekClick, isDark }: CalendarProps) {
   const [currentDate, setCurrentDate] = useState(new Date());
   const [expandedWeek, setExpandedWeek] = useState<number | null>(null);
   const navigate = useNavigate();

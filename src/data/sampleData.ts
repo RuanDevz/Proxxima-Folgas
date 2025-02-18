@@ -1,4 +1,4 @@
-import { Employee } from '../types';
+import { Employee, LeaveRequest } from '../types';
 
 export const sampleEmployees: Employee[] = [
   {
@@ -652,4 +652,24 @@ export const sampleEmployees: Employee[] = [
     address: 'Rua Exemplo, 135 - São Paulo, SP',
     birthDate: '1986-03-15'
   }
+];
+
+export const sampleLeaveRequests: LeaveRequest[] = [
+  {
+    id: '1',
+    employeeId: '1',
+    startDate: '2024-02-15',
+    endDate: '2024-02-20',
+    type: 'vacation',
+    status: 'approved'
+  },
+  {
+    id: '2',
+    employeeId: '2',
+    startDate: '2024-03-05',
+    endDate: '2024-03-10',
+    type: 'vacation',
+    status: 'pending'
+  }
+  // Adicione mais solicitações aqui...
 ];

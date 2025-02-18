@@ -10,6 +10,7 @@ export interface Employee {
   phone: string;
   address: string;
   birthDate: string;
+  isDark?: boolean
 }
 
 export interface LeaveRequest {
@@ -20,6 +21,7 @@ export interface LeaveRequest {
   type: 'vacation' | 'dayoff' | 'maternity' | 'other';
   status: 'pending' | 'approved' | 'rejected';
   notes?: string;
+  isDark?: boolean
 }
 
 export interface WeekPeriod {

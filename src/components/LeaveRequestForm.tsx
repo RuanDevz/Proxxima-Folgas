@@ -5,9 +5,11 @@ import type { LeaveRequest, Employee } from '../types';
 interface LeaveRequestFormProps {
   employees: Employee[];
   onSubmit: (request: Omit<LeaveRequest, 'id' | 'status'>) => void;
+  isDark: boolean; // Adicionando a propriedade correta
 }
 
-export function LeaveRequestForm({ employees, onSubmit }: LeaveRequestFormProps) {
+
+export function LeaveRequestForm({ employees, onSubmit, isDark }: LeaveRequestFormProps) {
   const [formData, setFormData] = useState({
     employeeId: '',
     startDate: '',
